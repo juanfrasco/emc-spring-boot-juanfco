@@ -21,7 +21,8 @@ public class SpringEmcWebApiApplication {
 	void applicationReadyEvent() {
 		if(System.getenv("DYNO") == null) {
 			System.out.println("Lanzo el browser");
-			browse("http://localhost:8080/swagger-ui/index.html");
+			//browse("http://localhost:8080/swagger-ui/index.html");
+			browse("https://emc-spring-boot--juanfco.herokuapp.com/swagger-ui/index.html");
 		} else {
 			System.out.println("Estoy en Heroku");
 		}
