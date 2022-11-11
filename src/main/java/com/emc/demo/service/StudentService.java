@@ -18,5 +18,9 @@ public class StudentService  {
 		// TODO Auto-generated method stub
 		return studentRepository.findAll();
 	}
+	
+	public Student saveStudent(Student student) {
+		return studentRepository.save(student);
+	}
 
 }
