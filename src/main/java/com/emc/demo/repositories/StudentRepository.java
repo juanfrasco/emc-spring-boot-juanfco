@@ -12,6 +12,7 @@ public interface StudentRepository extends JpaRepository<Student,Integer> {
 	
 	//Métodos añadidos utilizando nombre de métodos generados por Spring
 	List<Student> findByName(String name);
+	
 	List<Student> findByNameAndSurname(String name, String surname);
 	
 	//Método añadido utilizando JPQL

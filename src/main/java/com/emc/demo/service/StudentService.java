@@ -23,6 +23,11 @@ public class StudentService  {
 	
 	
 	//Métodos propios definidos en el repositorio
+	public Student getStudentsById(int id) {
+		Optional<Student>  student = studentRepository.findById(id);
+		return student.get();
+	}
+	
 	public List<Student> getStudentsByName(String name) {
 		// TODO Auto-generated method stub
 		return studentRepository.findByName(name);
