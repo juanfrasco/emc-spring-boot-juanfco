@@ -13,8 +13,8 @@ import com.emc.demo.model.Student;
 //La idea es crear els test a l'entorn de laboratori, ja que possiblement no es pot
 //accedir a la base de dades en producció. Per això utilitzem H2
 
-//@DataJpaTest per defecte arrenca Spring Boot i també per defecte H2 ja que un test unitari no ha de dependre
-//d'un servei extern. Es crearan les taules automàticament a partir dels models
+//@DataJpaTest per defecte arrenca Spring Boot i també per defecte H2 ja que utilitza una configuració per defecte
+//A més a més, es crearan les taules automàticament a partir dels models
 @DataJpaTest
 //@AutoConfigureTestDatabase(replace= Replace.NONE)
 class StudentRepositoryTest {

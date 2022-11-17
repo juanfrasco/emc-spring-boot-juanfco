@@ -27,7 +27,7 @@ table.center {
     </thead>
     <tbody>
 	<tr th:if="${students.empty}">
-            <td colspan="2"> No Books Available </td>
+            <td colspan="2"> Llista buida </td>
         </tr>
         <tr th:each="student : ${students}">
             <td><span th:text="${student.name}"> Name </span></td>
