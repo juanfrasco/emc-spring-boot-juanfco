@@ -65,6 +65,8 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		
+		
 		<!-- Dependencias añadida para thymeleaf -->		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
