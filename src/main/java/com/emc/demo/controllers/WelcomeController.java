@@ -18,7 +18,7 @@ public class WelcomeController {
 		return "index"; // view
 	}
 
-	// /hello?name=kotlin
+	// /hello?name=juanfco
 	@GetMapping("/hello")
 	public String mainWithParam(
 			@RequestParam(name = "name", required = false, defaultValue = "") String name,

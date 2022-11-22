@@ -14,6 +14,10 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 //Clase que arranca el programa
 //Per proba a Heroku: https://emc-spring-boot--juanfco.herokuapp.com/
+
+//Ejemplo completo (yo): https://www.baeldung.com/spring-boot-crud-thymeleaf
+//Ejemplo completo (jordi): https://bushansirgur.in/spring-boot-thymeleaf-form-submit-example/
+
 @SpringBootApplication
 public class SpringEmcWebApiApplication {
 
