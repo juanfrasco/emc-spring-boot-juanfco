@@ -3,12 +3,16 @@ package com.emc.demo.controllers;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
 
 import com.emc.demo.model.Student;
@@ -47,5 +51,22 @@ public class StudentController {
 		//La pagina html showStudents consultarà la clau "students"
 		return "showStudents";
 
+	}
+	
+	@GetMapping("/addStudent")
+	public String addStudent(Student student) {
+		//devolvemos el formulario vista que agregará un estudiante
+		return "addStudent"; 
+	}
+	
+	@PostMapping("/saveStudent")
+	public String saveStudent(@Valid Student student, BindingResult result) {
+		 if (result.hasErrors()) {
+	            return "addStudent";
+	     }
+	        
+
+		 ResponseEntity<String> result2 = restTemplate.postForEntity(fooResourceUrl, student, String.class);
+	     return "redirect:/studentList";
 	}
 }
