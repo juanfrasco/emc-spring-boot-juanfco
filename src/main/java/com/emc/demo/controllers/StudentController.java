@@ -33,7 +33,7 @@ public class StudentController {
 
 		//Les URLs també haurien d'anar amb variables d'entorn
 //		if (System.getenv("DYNO") == null) {
-//			fooResourceUrl = "https://emc-test--juanfco.herokuapp.com/student/students";
+//			//fooResourceUrl = "https://emc-test--juanfco.herokuapp.com/student/students";
 //		} else {
 //			fooResourceUrl = "http://localhost:8080/student/students";
 //		}
